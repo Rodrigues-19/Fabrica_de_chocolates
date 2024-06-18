@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Epilogue:ital,wght@0,500;1,500&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,800;1,800&family=Roboto:wght@700&family=Teko:wght@600&display=swap');
+
+:root {
+    --fonte-primaria: "Dancing Script", sans-serif;
+    --fonte-secundaria: "Teko", sans-serif;
+    --fonte-terciaria: "Epilogue", sans-serif;
+    --fonte-quarternaria: "Montserrat", sans-serif;
+    --fonte-quintenaria: "Inter", sans-serif;
+}
+
+
+/* Corpo da página,  */
+body{
+    margin: 0;
+    font-family: var(--fonte-terciaria);
+    background-image: url(../image/background_image_chocolate.jpg);
+    background-repeat:initial;
+
+}
+
+/* Conteúdo da página - Posição, alinhamento do conteúdo e movimento de puxar os itens par a esquerda quando abre a aba do carrinho */
+.container{
+    width: 900px;
+    margin-left: 20%;
+    /* margin: auto;  */
+    max-width: 90vw;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform .5s;
+    
+}
+
+/* Controla o tamanho do ícone do carrinho de compras */
+svg{
+    width: 1.875rem;
+}
+
+/* Configuração do Header da página - posição, distrância e tamanho do header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Icone do carrinho de compras */
+.icon-cart{
+    position:relative;
+    cursor: pointer;
+}
+
+/* Icone de contador do carrinho */
+.icon-cart span{
+    position: absolute;
+    background-color: red;
+    width: 22.5px;
+    height: 22.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    top: 55%;
+    right: -23.5px;
+}
+
+/* Título da página */
+.title{
+    font-family: var(--fonte-secundaria);
+    font-size: 2.2rem;
+    font-weight: 1000;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #b96a03;
+  
+}
+
+/* Imagem dos produtos listados na página */
+.listProduct .item img{
+    width: 60%;
+    max-width: 60%;
+    height: 40%; 
+    max-height: 60%;
+    filter: drop-shadow(0 15px 20px #0009);
+    align-items: baseline;
+    justify-content: center;
+}
+
+/* Card dos produtos listados - Config geral */
+.listProduct{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-content: baseline;
+}
+
+/* Card dos produtos listados por item */
+.listProduct .item{
+    background-color: #EEEEE6;
+    padding: 20px 20px 20px;
+    border-radius: 20px;
+}
+
+/* Nome dos produtos */
+.listProduct .item h2{
+    font-weight: 500;
+    font-size: 1.25rem;
+    font-family: var(--fonte-primaria);
+    justify-content: baseline;
+    
+}
+
+/* Preço dos produtos listados na tela */
+.listProduct .item .price{
+    letter-spacing: 7px;
+    font-size: small;
+    font-family: var(--fonte-quintenaria);
+    
+}
+
+/* Aqui para mexer no botão de adicionar ao carrinho. */
+.listProduct .item button{
+    background-color: #023d64fa;
+    color: #eee;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-family: var(--fonte-quintenaria);
+    cursor: pointer;
+}
+
+/* :hover aciona uma função de quando passar o mouse por cima do elemento em questão, ele mude levemente de cor */
+.listProduct .item button:hover {
+    background-color: #17415e;
+    color: #c9c3c3;
+
+}
+
+/* Aba do Carrinho - Estrutura Inicial, transição de abertura do carrinho, puxando da direita para a esquerda */
+.cartTab{
+    width: 500px;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    top: 0;
+    right: -500px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+
+
+/* Menu do carrinho - Posição, distância à direita da tela */
+body.showCart .cartTab{
+    right: 0;
+
+}
+
+/* Exibição do menu de carrinho - Faz o conteúdo da página se deslocar para a esquerda */
+body.showCart .container{
+    transform: translateX(-150px);
+}
+
+/* Título na aba do carrinho */
+.cartTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    font-family: var(--fonte-terciaria);
+    color:#fee;
+}
+
+/* Subtotal */
+.cartTab .subtotal {
+     /* padding: 0px 0px 0px 0px; */
+     /* background-color: red; */
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+    color:#fee;
+    font-family: var(--fonte-quintenaria);
+    
+}
+
+/* Configurações gerais do botão do carrinho */
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-family: var(--fonte-quintenaria);
+    height: 60px;
+    
+
+}
+
+/* Botão de Comprar do carrinho */
+.cartTab button{
+    background-color: #E8BC0E;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cartTab button:hover {
+    background-color: #e0c144;
+}
+
+/* Botão Fechar do carrinho */
+.cartTab .close{
+    background-color: #eee;
+}
+
+.cartTab .close:hover {
+    background-color: #bdbaba;
+}
+
+/* Imagens dos itens dentro da aba do carrinho */
+.listCart .item img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 10px;
+    border-radius: 10%;
+}
+
+/* Todo o texto dentro da abado carrinho, desde o nome do produto até o botão de adicionar qtd: > */
+.listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    font-family: var(--fonte-terciaria);
+    font-size: 0.938rem;
+}
+
+/* Botões de adiciona/remover itens, Sinais <> */
+.listCart .quantity span{
+    display:inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    color: #7504f7f3;
+    cursor: pointer;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.25rem;
+}
+
+/* Cor do número de quantidade de itens da aba do carrinho */
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    cursor: auto;
+}
+
+/* Muda a cor levemente apagada da aba do carrinho de compras que contém a lista adicionada de itens */
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+.listCart{
+    overflow: auto;
+}
+
+
+
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+
+
+footer {
+    padding: 0.5rem;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    gap: 55rem;
+    align-items: center;
+    background: #23181a;
+}
+
+.logo {
+    width: 4%;
+    margin-left: 8%;
+}
+
+.footer__copy {
+    font-family: var(--fonte-quintenaria);
+    font-size:  .8rem;
+    font-weight: 500;
+    color: #FFF2E7;
+}
+
+.footer__autor {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 242, 231, 0.50);
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.instagram_image {
+    width: 14%;
+
+}
+
+
+@media only screen and (max-width: 950px){
+
+    .listProduct{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* mobile */
+@media only screen and (max-width: 768px) {
+    .listProduct{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
