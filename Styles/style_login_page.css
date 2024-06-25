@@ -39,7 +39,7 @@ body * {
 
 /*  Caso tenha mais de um h1 na página, esse bloco de código vai ser aplicado a todo os títulos */
 .left-login > h1 {
-    font-size: 3vw;
+    font-size: 2vw;
     color: #77ffc0;
 
 }
@@ -64,7 +64,8 @@ Caso tenha só dois valores:
 2º - Eixo X
 */
 .card-login{
-    width: 40%;
+    width: 50%;
+    height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;

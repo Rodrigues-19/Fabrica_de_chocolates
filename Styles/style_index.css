@@ -8,138 +8,140 @@
     --fonte-quintenaria: "Inter", sans-serif;
 }
 
-
-/* Corpo da página,  */
-body{
+/* Corpo da página */
+body {
     margin: 0;
     font-family: var(--fonte-terciaria);
     background-image: url(../image/background_image_chocolate.jpg);
-    background-repeat:initial;
+    /* background-repeat: initial;
+    background-size: cover; */
 
 }
 
-/* Conteúdo da página - Posição, alinhamento do conteúdo e movimento de puxar os itens par a esquerda quando abre a aba do carrinho */
-.container{
-    width: 900px;
+/* Conteúdo da página - Posição, alinhamento do conteúdo e movimento de puxar os itens para a esquerda quando abre a aba do carrinho */
+.container {
+    width: 50vw;
     margin-left: 20%;
-    /* margin: auto;  */
     max-width: 90vw;
     text-align: center;
     padding-top: 10px;
     transition: transform .5s;
-    
 }
 
 /* Controla o tamanho do ícone do carrinho de compras */
-svg{
-    width: 1.875rem;
+svg {
+    width: 1.563vw;
 }
 
-/* Configuração do Header da página - posição, distrância e tamanho do header */
-header{
+/* Configuração do Header da página - posição, distância e tamanho do header */
+header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /* Centraliza os itens */
     align-items: center;
     padding: 20px 0;
+    gap: 20px; /* Espaçamento entre o título e o ícone do carrinho */
 }
 
-/* Icone do carrinho de compras */
-.icon-cart{
-    position:relative;
+/* Ícone do carrinho de compras */
+.icon-cart {
+    position: relative;
     cursor: pointer;
 }
 
-/* Icone de contador do carrinho */
-.icon-cart span{
+/* Ícone de contador do carrinho */
+.icon-cart span {
     position: absolute;
     background-color: red;
-    width: 22.5px;
-    height: 22.5px;
+    width: 1.2vw; /* Reduzido o tamanho do contador */
+    height: 2.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     color: #fff;
-    top: 55%;
-    right: -23.5px;
+    top: 60%; /* Ajustado para ficar ligeiramente abaixo do ícone */
+    right: -80%; /* Ajustado para ficar ligeiramente à direita do ícone */
 }
 
 /* Título da página */
-.title{
+.title {
     font-family: var(--fonte-secundaria);
     font-size: 2.2rem;
     font-weight: 1000;
     text-transform: uppercase;
     background-color: transparent;
     color: #b96a03;
-  
 }
 
-/* Imagem dos produtos listados na página */
-.listProduct .item img{
-    width: 60%;
-    max-width: 60%;
-    height: 40%; 
-    max-height: 60%;
-    filter: drop-shadow(0 15px 20px #0009);
-    align-items: baseline;
-    justify-content: center;
-}
-
-/* Card dos produtos listados - Config geral */
-.listProduct{
-    margin-top: 50px;
+/* Lista de produtos */
+.listProduct {
+    margin-top: 6vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 20px; /* Ajuste o espaçamento entre os cards */
     justify-content: baseline;
 }
 
 /* Card dos produtos listados por item */
-.listProduct .item{
+.listProduct .item {
     background-color: #EEEEE6;
-    padding: 20px 20px 20px;
+    padding: 20px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Imagem dos produtos listados na página */
+.listProduct .item img {
+    width: 60%;
+    max-width: 60%;
+    height: auto; 
+    filter: drop-shadow(0 15px 20px #0009);
+    margin-bottom: 10px; /* Ajuste o espaçamento entre os elementos dentro do card */
 }
 
 /* Nome dos produtos */
-.listProduct .item h2{
+.listProduct .item h2 {
     font-weight: 500;
     font-size: 1.25rem;
     font-family: var(--fonte-primaria);
-    justify-content: baseline;
-    
+    margin: 10px 0;
+    text-align: center;
 }
 
 /* Preço dos produtos listados na tela */
-.listProduct .item .price{
+.listProduct .item .price {
     letter-spacing: 7px;
     font-size: small;
     font-family: var(--fonte-quintenaria);
-    
+    margin: 10px 0;
+    text-align: center;
 }
 
-/* Aqui para mexer no botão de adicionar ao carrinho. */
-.listProduct .item button{
+/* Botão de adicionar ao carrinho */
+.listProduct .item button {
     background-color: #023d64fa;
-    color: #eee;
+    color: #ffffff;
     border: none;
-    padding: 5px 10px;
-    margin-top: 20px;
+    padding: 10px 20px;
     border-radius: 20px;
     font-family: var(--fonte-quintenaria);
     cursor: pointer;
+    margin-top: auto;
 }
 
 /* :hover aciona uma função de quando passar o mouse por cima do elemento em questão, ele mude levemente de cor */
 .listProduct .item button:hover {
     background-color: #17415e;
     color: #c9c3c3;
-
 }
 
 /* Aba do Carrinho - Estrutura Inicial, transição de abertura do carrinho, puxando da direita para a esquerda */
-.cartTab{
+.cartTab {
     width: 500px;
     background-color: #353432;
     color: #eee;
@@ -152,51 +154,44 @@ header{
     transition: .5s;
 }
 
-
 /* Menu do carrinho - Posição, distância à direita da tela */
-body.showCart .cartTab{
+body.showCart .cartTab {
     right: 0;
-
 }
 
 /* Exibição do menu de carrinho - Faz o conteúdo da página se deslocar para a esquerda */
-body.showCart .container{
+body.showCart .container {
     transform: translateX(-150px);
 }
 
 /* Título na aba do carrinho */
-.cartTab h1{
+.cartTab h1 {
     padding: 20px;
     margin: 0;
     font-weight: 300;
     font-family: var(--fonte-terciaria);
-    color:#fee;
+    color: #fee;
 }
 
 /* Subtotal */
 .cartTab .subtotal {
-     /* padding: 0px 0px 0px 0px; */
-     /* background-color: red; */
     display: flex;
     justify-content: flex-end;
     margin-right: 100px;
-    color:#fee;
+    color: #fee;
     font-family: var(--fonte-quintenaria);
-    
 }
 
 /* Configurações gerais do botão do carrinho */
-.cartTab .btn{
+.cartTab .btn {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     font-family: var(--fonte-quintenaria);
     height: 60px;
-    
-
 }
 
 /* Botão de Comprar do carrinho */
-.cartTab button{
+.cartTab button {
     background-color: #E8BC0E;
     border: none;
     font-family: Poppins;
@@ -209,7 +204,7 @@ body.showCart .container{
 }
 
 /* Botão Fechar do carrinho */
-.cartTab .close{
+.cartTab .close {
     background-color: #eee;
 }
 
@@ -218,7 +213,7 @@ body.showCart .container{
 }
 
 /* Imagens dos itens dentro da aba do carrinho */
-.listCart .item img{
+.listCart .item img {
     width: 100%;
     height: 100%;
     max-width: 100%;
@@ -227,8 +222,8 @@ body.showCart .container{
     border-radius: 10%;
 }
 
-/* Todo o texto dentro da abado carrinho, desde o nome do produto até o botão de adicionar qtd: > */
-.listCart .item{
+/* Todo o texto dentro da aba do carrinho, desde o nome do produto até o botão de adicionar qtd: > */
+.listCart .item {
     display: grid;
     grid-template-columns: 70px 150px 50px 1fr;
     gap: 10px;
@@ -238,9 +233,9 @@ body.showCart .container{
     font-size: 0.938rem;
 }
 
-/* Botões de adiciona/remover itens, Sinais <> */
-.listCart .quantity span{
-    display:inline-block;
+/* Botões de adicionar/remover itens, Sinais <> */
+.listCart .quantity span {
+    display: inline-block;
     width: 25px;
     height: 25px;
     background-color: #eee;
@@ -252,46 +247,45 @@ body.showCart .container{
 }
 
 /* Cor do número de quantidade de itens da aba do carrinho */
-.listCart .quantity span:nth-child(2){
+.listCart .quantity span:nth-child(2) {
     background-color: transparent;
     color: #eee;
     cursor: auto;
 }
 
 /* Muda a cor levemente apagada da aba do carrinho de compras que contém a lista adicionada de itens */
-.listCart .item:nth-child(even){
+.listCart .item:nth-child(even) {
     background-color: #eee1;
 }
-.listCart{
+
+.listCart {
     overflow: auto;
 }
 
-
-
-.listCart::-webkit-scrollbar{
+.listCart::-webkit-scrollbar {
     width: 0;
 }
 
-
 footer {
-    padding: 0.5rem;
-    margin-top: 6rem;
+
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
-    gap: 55rem;
+    justify-content: space-around;
     align-items: center;
     background: #23181a;
+    margin-top: 6rem; 
+    padding: .5rem;    
+
 }
 
 .logo {
-    width: 4%;
+    width: 6%;
     margin-left: 8%;
 }
 
 .footer__copy {
     font-family: var(--fonte-quintenaria);
-    font-size:  .8rem;
+    font-size: .8rem;
     font-weight: 500;
     color: #FFF2E7;
 }
@@ -299,30 +293,203 @@ footer {
 .footer__autor {
     display: flex;
     align-items: center;
-    color: rgba(255, 242, 231, 0.50);
-    font-family: Inter;
-    font-size: 1rem;
-    font-weight: 500;
-    text-decoration: none;
+    color: rgba(255, 242, 231, 0.83);
+    font-family: var(--fonte-quintenaria);
+    font-weight: 300;
+    font-size: .8rem;
 }
+
 
 .instagram_image {
-    width: 14%;
-
+    width: 15%;
 }
 
 
-@media only screen and (max-width: 950px){
-
-    .listProduct{
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
 
 
 /* mobile */
 @media only screen and (max-width: 768px) {
-    .listProduct{
+
+
+    .container {
+        width: 90vw;
+        margin: auto;
+        max-width: 90vw;
+        text-align: center;
+        padding-top: 10px;
+        transition: transform .5s;
+    }
+
+    svg {
+        width: 7vw;
+    }
+
+    header {
+        margin-right: 0;
+        display: flex;
+        justify-content: center; /* Centraliza os itens */
+        align-items: center;
+        padding: 10px 0;
+        gap: 10px; /* Espaçamento entre o título e o ícone do carrinho */
+    }
+
+    .icon-cart {
+        position: relative;
+    }
+
+    .icon-cart span {
+        position: absolute;
+        background-color: red;
+        width: 7vw; /* Ajuste do tamanho do contador */
+        height: 3.2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: #fff;
+        top: 50%; /* Ajuste da posição do contador */
+        right: -20%; /* Ajuste da posição do contador */
+        left: 100%;
+    }
+
+
+    .title {
+        font-family: var(--fonte-secundaria);
+        font-size: 1.8rem;
+        font-weight: 1000;
+        text-transform: uppercase;
+        background-color: transparent;
+        color: #b96a03;
+    }
+
+    .listProduct {
+        margin-top: auto;
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .listProduct .item {
+        background-color: #EEEEE6;
+        padding: 10px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    .listProduct .item img {
+        width: 80%;
+        height: auto;
+        filter: drop-shadow(0 10px 10px #0009);
+        margin-bottom: 10px;
+    }
+
+    .listProduct .item h2 {
+        font-weight: 500;
+        font-size: 1rem;
+        font-family: var(--fonte-terciaria);
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .listProduct .item .price {
+        font-size: small;
+        font-family: var(--fonte-quintenaria);
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .listProduct .item button {
+        background-color: #023d64fa;
+        color: #ffffff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-family: var(--fonte-quintenaria);
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+
+    footer {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 50px;
+        align-items:center;
+        margin-top: 6rem; 
+        padding: .5rem;
+        background: #23181a;    
+    
+    }
+
+    .logo {
+        width: 6%;
+        margin-left: 8%;
+    }
+
+    .footer__copy {
+        font-family: var(--fonte-quintenaria);
+        font-size: .8rem;
+        font-weight: 500;
+        color: #FFF2E7;
+    }
+    
+    .footer__autor {
+        display: flex;
+        align-items: center;
+        color: rgba(255, 242, 231, 0.83);
+        font-family: var(--fonte-quintenaria);
+        font-weight: 300;
+        font-size: .8rem;
+    }
+
+    .instagram_image {
+        width: 30%;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 480px) {
+    .listProduct {
+        grid-template-columns: 1fr;
+    }
+
+    .listProduct .item {
+        padding: 10px;
+    }
+
+    .listProduct .item img {
+        width: 90%;
+    }
+
+    .listProduct .item h2 {
+        font-size: 0.9rem;
+    }
+
+    .listProduct .item .price {
+        font-size: 0.8rem;
+    }
+
+    .listProduct .item button {
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+
+    .icon-cart span {
+        width: 10vw; /* Ajuste do tamanho do contador */
+        height: 4vh;
+        right: -25%; /* Ajuste da posição do contador */
+    }
+
+    .title {
+        font-size: 1.5rem;
     }
 }
