@@ -1,74 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta charset="UTF-8">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     <link rel="stylesheet" href="./Styles/style_login_page.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
-    <div class="main-login">
-        <div class="left-login">
-            <h1>Faça login<br>E apaixone-se por nossos cones!</h1>
-            <img src="sign-up-animate.svg" class="left-login-image" alt="animação Login page">
-        </div>
-        <div class="right-login">
-            <div class="card-login">
-                <h1>Login</h1>
-                <div class="textfield">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
-                </div>
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
-                </div>
-                <button class="btn-login">Login</button>  
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Bem vindo de volta!</h2>
+                <p class="description description-primary">Para manter-se conectado</p>
+                <p class="description description-primary">faça login com seu e-mail e senha</p>
+                <button id="signin" class="btn btn-primary">login</button>
+            </div>    
+            <div class="second-column">
+                <h2 class="title title-second">Cadastre-se</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f"></i>        
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- social media -->
+                <p class="description description-second">Ou preencha os dados solicitados</p>
+                <div class="right-login">
+                    <div class="card-login">
+                        <form action="login_page.php" method="POST">
+                            <div class="form-container">
+                                <div class="textfield">
+                                    <input type="text" name="nome" id="nome" class="inputUser" placeholder="Nome Completo" required>
+                                </div>
+                                <div class="textfield">
+                                    <input type="value" name="telefone" id="telefone" class="inputUser" placeholder="Telefone" required>
+                                </div>
+                                <div class="textfield">
+                                    <input type="text" name="email" id="email" class="inputUser" placeholder="E-mail" required>
+                                </div>
+                                <div class="textfield">
+                                    <input type="value" name="cep" id="cep" class="inputUser" placeholder="Cep" required>
+                                </div>
+                                <div class="textfield">
+                                    <input type="text" name="endereco" id="endereco" class="inputUser" placeholder="Endereço" required>
+                                </div>
+                                <div class="textfield">
+                                    <input type="value" name="Numero" id="Numero" class="inputUser" placeholder="Numero" required>
+                                </div>
+                                <div class="textfield">
+                                    <input type="text" name="Bairro" id="Bairro" class="inputUser" placeholder="Bairro" required>
+                                </div>
+                                <div class="textfield">
+                                    <input type="text" name="complemento" id="complemento" class="inputUser" placeholder="Complemento" required>
+                                </div>
+                                <div class="textfield">
+                                    <input type="password" name="password" id="password" class="inputUser" placeholder="Senha" required>
+                                </div>
+                                <div class="textfield">
+                                    <input type="password" name="confirmapassword" id="confirmapassword" class="inputUser" placeholder="Confirme a Senha" required>
+                                </div> 
+                            </div>     
+                        </form>
+                    </div>
+               </div>
+               <button class="btn btn-second">cadastrar</button>
+            </div><!-- second column -->
+        </div><!-- first content -->
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Novo por aqui?!</h2>
+                <p class="description description-primary">Cadastre-se</p>
+                <p class="description description-primary">E experimente nossos deliciosos cones!</p>
+                <button id="signup" class="btn btn-primary">Cadastro</button>
             </div>
-        </div>
-    </div>
+            <div class="second-column">
+                <h2 class="title title-second">Faça login</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- social media -->
+                <p class="description description-second">ou utilize sua conta de e-mail:</p>
 
+                <form class="form">
+                
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Email">
+                    </label>
+                
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Password">
+                    </label>
+                
+                    <a class="password" href="#">esqueceu a senha?</a>
+                    <button class="btn btn-second">sign in</button>
+                </form>
+            </div><!-- second column -->
+        </div><!-- second-content -->
+    </div>
+    <script src="./app_login_page.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="./Styles/style_login_page.css">
-</head>
-<body>
-    <div class="main-login">
-        <div class="left-login">
-            <h1>Faça login<br>E apaixone-se por nossos cones!</h1>
-            <img src="sign-up-animate.svg" class="left-login-image" alt="animação Login page">
-        </div>
-        <div class="right-login">
-            <div class="card-login">
-                <h1>Login</h1>
-                <div class="textfield">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
-                </div>
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
-                </div>
-                <button class="btn-login">Login</button>  
-            </div>
-        </div>
-    </div>
-
-</body>
-</html> -->

@@ -13,6 +13,7 @@ body {
     margin: 0;
     font-family: var(--fonte-terciaria);
     background-image: url(../image/background_image_chocolate.jpg);
+    z-index: 1;
     /* background-repeat: initial;
     background-size: cover; */
 
@@ -40,6 +41,12 @@ header {
     align-items: center;
     padding: 20px 0;
     gap: 20px; /* Espaçamento entre o título e o ícone do carrinho */
+}
+
+/* ìcone de login do usuário */
+.login_icon {
+    width: 2vw;
+    z-index: 10;
 }
 
 /* Ícone do carrinho de compras */
@@ -152,6 +159,7 @@ header {
     display: grid;
     grid-template-rows: 70px 1fr 70px;
     transition: .5s;
+    z-index: 10;
 }
 
 /* Menu do carrinho - Posição, distância à direita da tela */
@@ -266,22 +274,35 @@ body.showCart .container {
     width: 0;
 }
 
-footer {
+.whatsapp-link {
+    position: fixed;
+    width: 4vw;
+    height: 9vh;
+    bottom: 7.5vw;
+    right: 2.5vw;
+    z-index: 5;
+}
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+footer {
     background: #23181a;
     margin-top: 6rem; 
-    padding: .5rem;    
+    padding: .5rem;
 
 }
 
-.logo {
+.estilo_footer {
+    margin-left: 15rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 300px;
+}
+
+/* Logo do footer, Delícias do dandan */
+/* .logo {
     width: 6%;
-    margin-left: 8%;
-}
+    margin-left: 10%;
+} */
 
 .footer__copy {
     font-family: var(--fonte-quintenaria);
@@ -290,7 +311,14 @@ footer {
     color: #FFF2E7;
 }
 
+.github {
+
+    max-width: 20%;
+    border-radius: 100%;
+}
+          
 .footer__autor {
+
     display: flex;
     align-items: center;
     color: rgba(255, 242, 231, 0.83);
@@ -301,10 +329,9 @@ footer {
 
 
 .instagram_image {
+
     width: 15%;
 }
-
-
 
 
 /* mobile */
@@ -326,11 +353,17 @@ footer {
 
     header {
         margin-right: 0;
+        margin-left: 0;
         display: flex;
         justify-content: center; /* Centraliza os itens */
         align-items: center;
         padding: 10px 0;
-        gap: 10px; /* Espaçamento entre o título e o ícone do carrinho */
+        gap: 35px; /* Espaçamento entre o título e o ícone do carrinho */
+    }
+
+    .login_icon {
+        width: 8vw;
+        z-index: 10;
     }
 
     .icon-cart {
@@ -340,7 +373,9 @@ footer {
     .icon-cart span {
         position: absolute;
         background-color: red;
+        max-width: 6vw;
         width: 7vw; /* Ajuste do tamanho do contador */
+        max-height: 3vh;
         height: 3.2vh;
         display: flex;
         justify-content: center;
@@ -352,14 +387,14 @@ footer {
         left: 100%;
     }
 
-
     .title {
         font-family: var(--fonte-secundaria);
-        font-size: 1.8rem;
+        font-size: 2.8rem;
         font-weight: 1000;
         text-transform: uppercase;
         background-color: transparent;
-        color: #b96a03;
+        color: #f35e07;
+        z-index: 15;
     }
 
     .listProduct {
@@ -382,8 +417,8 @@ footer {
     }
 
     .listProduct .item img {
-        width: 80%;
-        height: auto;
+        width: 70%;
+        height: 70%;
         filter: drop-shadow(0 10px 10px #0009);
         margin-bottom: 10px;
     }
@@ -414,13 +449,42 @@ footer {
         margin-top: 10px;
     }
 
+    .cartTab {
+        width: 100vw;
+        background-color: #353432;
+        color: #eee;
+        position: fixed;
+        top: 0;
+        right: -500px;
+        bottom: 0;
+        display: grid;
+        grid-template-rows: 70px 1fr 70px;
+        transition: .5s;
+    }
 
-    footer {
+    .estilo_footer {
 
+        margin-left: 10px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        gap: 50px;
+        align-items: center;
+        gap: 40px;
+
+    }
+
+    .whatsapp-link {
+    
+        position: fixed;
+        width: 18vw;
+        height: 8.5vh;
+        bottom: 85px;
+        right: 5vw;
+        z-index: 5;
+    }
+
+    footer {
+        
         align-items:center;
         margin-top: 6rem; 
         padding: .5rem;
@@ -428,29 +492,33 @@ footer {
     
     }
 
+    .estilo_footer {
+        margin-left: 4.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
     .logo {
-        width: 6%;
-        margin-left: 8%;
+        width: 10%;
+        /* margin-left: 8%; */
     }
 
     .footer__copy {
         font-family: var(--fonte-quintenaria);
-        font-size: .8rem;
+        font-size: .9rem;
         font-weight: 500;
         color: #FFF2E7;
     }
     
-    .footer__autor {
-        display: flex;
-        align-items: center;
-        color: rgba(255, 242, 231, 0.83);
-        font-family: var(--fonte-quintenaria);
-        font-weight: 300;
-        font-size: .8rem;
+    .github {
+        max-width: 45%;
+        border-radius: 100%;
     }
 
     .instagram_image {
-        width: 30%;
+        width: 40%;
     }
 
 
