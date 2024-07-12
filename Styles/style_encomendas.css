@@ -291,18 +291,16 @@ footer {
 }
 
 .estilo_footer {
-    margin-left: 15rem;
+    margin-left: 13rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 300px;
+    justify-content: space-around;
+    /* gap: 300px; */
+    box-sizing: border-box;
 }
 
-/* Logo do footer, Delícias do dandan */
-/* .logo {
-    width: 6%;
-    margin-left: 10%;
-} */
+
 
 .footer__copy {
     font-family: var(--fonte-quintenaria);
@@ -312,21 +310,10 @@ footer {
 }
 
 .github {
-
-    max-width: 20%;
+    max-width: 22%;
     border-radius: 100%;
 }
           
-.footer__autor {
-
-    display: flex;
-    align-items: center;
-    color: rgba(255, 242, 231, 0.83);
-    font-family: var(--fonte-quintenaria);
-    font-weight: 300;
-    font-size: .8rem;
-}
-
 
 .instagram_image {
 
@@ -437,7 +424,7 @@ footer {
         margin: 10px 0;
         text-align: center;
     }
-
+    
     .listProduct .item button {
         background-color: #023d64fa;
         color: #ffffff;
