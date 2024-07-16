@@ -12,21 +12,19 @@
 body {
     margin: 0;
     font-family: var(--fonte-terciaria);
-    background-image: url(../image/background_image_chocolate.jpg);
+    /* background-image: url(../image/background_image_chocolate.jpg); */
     z-index: 1;
-    /* background-repeat: initial;
-    background-size: cover; */
-
+    background-color: #dad7cd;
 }
 
 /* Conteúdo da página - Posição, alinhamento do conteúdo e movimento de puxar os itens para a esquerda quando abre a aba do carrinho */
 .container {
-    width: 50vw;
-    margin-left: 20%;
-    max-width: 90vw;
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
     text-align: center;
-    padding-top: 10px;
     transition: transform .5s;
+    background-color: #d6ccc2;
 }
 
 /* Controla o tamanho do ícone do carrinho de compras */
@@ -34,13 +32,14 @@ svg {
     width: 1.563vw;
 }
 
-/* Configuração do Header da página - posição, distância e tamanho do header */
-header {
+/* header da página */
+.menu{
+    width: 100vw;
     display: flex;
-    justify-content: space-around; /* Centraliza os itens */
+    justify-content: space-around;
     align-items: center;
-    padding: 20px 0;
-    gap: 20px; /* Espaçamento entre o título e o ícone do carrinho */
+    padding: 1%;
+    margin-right: 5rem;
 }
 
 /* ìcone de login do usuário */
@@ -58,40 +57,35 @@ header {
 /* Ícone de contador do carrinho */
 .icon-cart span {
     position: absolute;
-    background-color: red;
-    width: 1.2vw; /* Reduzido o tamanho do contador */
-    height: 2.5vh;
+    background-color: rgb(33, 164, 173);
+    border: 1px solid #23181a;
+    width: 1.6vw; /* Reduzido o tamanho do contador */
+    height: 3.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    color: #fff;
+    color: #ffffff;
     top: 60%; /* Ajustado para ficar ligeiramente abaixo do ícone */
-    right: -80%; /* Ajustado para ficar ligeiramente à direita do ícone */
+    right: -99%; /* Ajustado para ficar ligeiramente à direita do ícone */
 }
 
-/* Título da página */
-.title {
-    font-family: var(--fonte-secundaria);
-    font-size: 2.2rem;
-    font-weight: 1000;
-    text-transform: uppercase;
-    background-color: transparent;
-    color: #b96a03;
+.presentation_img{
+    max-height: 300px;
+    width: 100vw;
 }
-
 /* Lista de produtos */
 .listProduct {
-    margin-top: 6vh;
+    margin: 2% 10% 2% 10%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px; /* Ajuste o espaçamento entre os cards */
+    gap: 50px; /* Ajuste o espaçamento entre os cards */
     justify-content: baseline;
 }
 
 /* Card dos produtos listados por item */
 .listProduct .item {
-    background-color: #EEEEE6;
+    background-color: #C5C4DA;
     padding: 20px;
     border-radius: 20px;
     display: flex;
@@ -128,8 +122,6 @@ header {
     margin: 10px 0;
     text-align: center;
 }
-
-/* Botão de adicionar ao carrinho */
 .listProduct .item button {
     background-color: #023d64fa;
     color: #ffffff;
@@ -140,14 +132,10 @@ header {
     cursor: pointer;
     margin-top: auto;
 }
-
-/* :hover aciona uma função de quando passar o mouse por cima do elemento em questão, ele mude levemente de cor */
 .listProduct .item button:hover {
     background-color: #17415e;
     color: #c9c3c3;
 }
-
-/* Aba do Carrinho - Estrutura Inicial, transição de abertura do carrinho, puxando da direita para a esquerda */
 .cartTab {
     width: 500px;
     background-color: #353432;
@@ -161,44 +149,32 @@ header {
     transition: .5s;
     z-index: 10;
 }
-
-/* Menu do carrinho - Posição, distância à direita da tela */
 body.showCart .cartTab {
     right: 0;
 }
-
-/* Exibição do menu de carrinho - Faz o conteúdo da página se deslocar para a esquerda */
 body.showCart .container {
-    transform: translateX(-150px);
+    transform: translateX(-50px);
 }
-
-/* Título na aba do carrinho */
 .cartTab h1 {
     padding: 20px;
     margin: 0;
     font-weight: 300;
     font-family: var(--fonte-terciaria);
-    color: #fee;
+    color: rgb(253, 253, 253);
 }
-
-/* Subtotal */
 .cartTab .subtotal {
     display: flex;
     justify-content: flex-end;
     margin-right: 100px;
-    color: #fee;
+    color: rgb(180, 224, 245);
     font-family: var(--fonte-quintenaria);
 }
-
-/* Configurações gerais do botão do carrinho */
 .cartTab .btn {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     font-family: var(--fonte-quintenaria);
     height: 60px;
 }
-
-/* Botão de Comprar do carrinho */
 .cartTab button {
     background-color: #E8BC0E;
     border: none;
@@ -206,21 +182,15 @@ body.showCart .container {
     font-weight: 500;
     cursor: pointer;
 }
-
 .cartTab button:hover {
     background-color: #e0c144;
 }
-
-/* Botão Fechar do carrinho */
 .cartTab .close {
     background-color: #eee;
 }
-
 .cartTab .close:hover {
     background-color: #bdbaba;
 }
-
-/* Imagens dos itens dentro da aba do carrinho */
 .listCart .item img {
     width: 100%;
     height: 100%;
@@ -229,8 +199,6 @@ body.showCart .container {
     margin-left: 10px;
     border-radius: 10%;
 }
-
-/* Todo o texto dentro da aba do carrinho, desde o nome do produto até o botão de adicionar qtd: > */
 .listCart .item {
     display: grid;
     grid-template-columns: 70px 150px 50px 1fr;
@@ -240,8 +208,6 @@ body.showCart .container {
     font-family: var(--fonte-terciaria);
     font-size: 0.938rem;
 }
-
-/* Botões de adicionar/remover itens, Sinais <> */
 .listCart .quantity span {
     display: inline-block;
     width: 25px;
@@ -253,27 +219,20 @@ body.showCart .container {
     font-family: var(--fonte-secundaria);
     font-size: 1.25rem;
 }
-
-/* Cor do número de quantidade de itens da aba do carrinho */
 .listCart .quantity span:nth-child(2) {
     background-color: transparent;
     color: #eee;
     cursor: auto;
 }
-
-/* Muda a cor levemente apagada da aba do carrinho de compras que contém a lista adicionada de itens */
 .listCart .item:nth-child(even) {
     background-color: #eee1;
 }
-
 .listCart {
     overflow: auto;
 }
-
 .listCart::-webkit-scrollbar {
     width: 0;
 }
-
 .whatsapp-link {
     position: fixed;
     width: 4vw;
@@ -282,118 +241,86 @@ body.showCart .container {
     right: 2.5vw;
     z-index: 5;
 }
-
-footer {
-    background: #23181a;
-    margin-top: 6rem; 
-    padding: .5rem;
-
-}
-
-.estilo_footer {
-    margin-left: 13rem;
+ footer {
+    background: #464555;
+    margin-top: 5rem; 
+    padding: .7rem;
     display: flex;
-    flex-direction: row;
+    justify-content:space-around;
     align-items: center;
-    justify-content: space-around;
-    /* gap: 300px; */
-    box-sizing: border-box;
 }
-
-
-
+.estilo_footer {
+    margin-left: 15rem;
+}
 .footer__copy {
     font-family: var(--fonte-quintenaria);
     font-size: .8rem;
     font-weight: 500;
     color: #FFF2E7;
 }
-
 .github {
-    max-width: 22%;
+    padding: 15px;
+    width: 20%;
     border-radius: 100%;
-}
-          
-
+}      
 .instagram_image {
+    width: 12%;
+    /* padding: 15px; */
+    margin-left: 9rem;
+} 
 
-    width: 15%;
-}
+
 
 
 /* mobile */
-@media only screen and (max-width: 768px) {
-
+@media only screen and (max-width: 768px) {  
 
     .container {
-        width: 90vw;
-        margin: auto;
-        max-width: 90vw;
-        text-align: center;
-        padding-top: 10px;
-        transition: transform .5s;
-    }
-
-    svg {
-        width: 7vw;
-    }
-
-    header {
-        margin-right: 0;
-        margin-left: 0;
         display: flex;
-        justify-content: center; /* Centraliza os itens */
-        align-items: center;
-        padding: 10px 0;
-        gap: 35px; /* Espaçamento entre o título e o ícone do carrinho */
+        justify-content: center;
+        max-width: 100vw;
+        text-align: center;
+        background-color: #d6ccc2;
     }
-
+    svg {
+        width: 5vw;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5%;
+        margin-right: 1.7rem;
+    }
     .login_icon {
-        width: 8vw;
+        width: 5.5vw;
         z-index: 10;
     }
-
     .icon-cart {
         position: relative;
     }
-
     .icon-cart span {
-        position: absolute;
-        background-color: red;
-        max-width: 6vw;
-        width: 7vw; /* Ajuste do tamanho do contador */
-        max-height: 3vh;
-        height: 3.2vh;
+        max-width: 5vw;
+        max-height: 2vh;
+        border: 1px solid #0018a0;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-        color: #fff;
-        top: 50%; /* Ajuste da posição do contador */
-        right: -20%; /* Ajuste da posição do contador */
+        color: #ffffff;
+        top: 50%;
+        right: -20%;
         left: 100%;
     }
-
-    .title {
-        font-family: var(--fonte-secundaria);
-        font-size: 2.8rem;
-        font-weight: 1000;
-        text-transform: uppercase;
-        background-color: transparent;
-        color: #f35e07;
-        z-index: 15;
-    }
-
     .listProduct {
-        margin-top: auto;
+        margin-top: 10%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 50px;
         justify-content: center;
     }
-
     .listProduct .item {
-        background-color: #EEEEE6;
+        background-color: #C5C4DA;
         padding: 10px;
         border-radius: 20px;
         display: flex;
@@ -402,29 +329,24 @@ footer {
         justify-content: space-between;
         height: auto;
     }
-
     .listProduct .item img {
-        width: 70%;
-        height: 70%;
+        height: 55%;
         filter: drop-shadow(0 10px 10px #0009);
         margin-bottom: 10px;
     }
-
-    .listProduct .item h2 {
+    .listProduct .item h {
         font-weight: 500;
-        font-size: 1rem;
-        font-family: var(--fonte-terciaria);
-        margin: 10px 0;
+        font-size:500px;
+        font-family: var(--fonte-primaria);
+        margin: 20px 0;
         text-align: center;
     }
-
     .listProduct .item .price {
         font-size: small;
         font-family: var(--fonte-quintenaria);
-        margin: 10px 0;
+        margin-top: 10px;
         text-align: center;
     }
-    
     .listProduct .item button {
         background-color: #023d64fa;
         color: #ffffff;
@@ -435,9 +357,8 @@ footer {
         cursor: pointer;
         margin-top: 10px;
     }
-
     .cartTab {
-        width: 100vw;
+        width: 110vw;
         background-color: #353432;
         color: #eee;
         position: fixed;
@@ -448,103 +369,65 @@ footer {
         grid-template-rows: 70px 1fr 70px;
         transition: .5s;
     }
-
-    .estilo_footer {
-
-        margin-left: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        gap: 40px;
-
-    }
-
     .whatsapp-link {
-    
         position: fixed;
         width: 18vw;
         height: 8.5vh;
         bottom: 85px;
-        right: 5vw;
+        right: .5rem;
         z-index: 5;
     }
-
     footer {
-        
-        align-items:center;
-        margin-top: 6rem; 
-        padding: .5rem;
-        background: #23181a;    
-    
-    }
-
-    .estilo_footer {
-        margin-left: 4.5rem;
+        background: #464555;
+        margin-top: 5rem;
+        padding: 1rem;
         display: flex;
-        flex-direction: row;
+        justify-content:center;
         align-items: center;
-        justify-content: space-around;
     }
-
-    .logo {
-        width: 10%;
-        /* margin-left: 8%; */
+    .estilo_footer {
+        margin-left: 3.5rem;
     }
-
     .footer__copy {
         font-family: var(--fonte-quintenaria);
-        font-size: .9rem;
+        font-size: 1rem;
         font-weight: 500;
         color: #FFF2E7;
     }
-    
     .github {
-        max-width: 45%;
+        padding: 15px;
+        width: 40%;
         border-radius: 100%;
-    }
-
+    }      
     .instagram_image {
         width: 40%;
-    }
-
-
-
+        padding: 15px;
+        margin-left: 10%;
+    } 
 }
-
 @media only screen and (max-width: 480px) {
     .listProduct {
         grid-template-columns: 1fr;
     }
-
     .listProduct .item {
         padding: 10px;
     }
-
     .listProduct .item img {
         width: 90%;
     }
-
     .listProduct .item h2 {
         font-size: 0.9rem;
     }
-
     .listProduct .item .price {
         font-size: 0.8rem;
     }
-
     .listProduct .item button {
         padding: 5px;
         font-size: 0.9rem;
     }
-
     .icon-cart span {
         width: 10vw; /* Ajuste do tamanho do contador */
         height: 4vh;
         right: -25%; /* Ajuste da posição do contador */
-    }
-
-    .title {
-        font-size: 1.5rem;
     }
 }

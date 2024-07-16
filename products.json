@@ -1,73 +1,73 @@
 [
     {
         "id": 1,
-        "name":" Delícia trufada: Ninho com Nutella",
+        "name":" Trufa: Ninho com Nutella",
         "price": 8,
         "image": "image/1.jpg"
     },
     {
         "id": 2,
-        "name":" Delícia trufada: Tradicional",
+        "name":" Trufa: Tradicional",
         "price": 8,
         "image": "image/2.jpg"
     },
     {
         "id": 3,
-        "name":" Delícia trufada: Prestígio",
+        "name":" Trufa: Prestígio",
         "price": 8,
         "image": "image/3.jpg"
     },
     {
         "id": 4,
-        "name":" Delícia trufada: Brigadeiro",
+        "name":" Trufa: Brigadeiro",
         "price": 8,
         "image": "image/4.jpg"
     },
     {
         "id": 5,
-        "name":" Delícia trufada: Doce de leite",
+        "name":" Trufa: Doce de leite",
         "price": 8,
         "image": "image/5.jpg"
     },
     {
         "id": 6,
-        "name":" Delícia trufada: Doce de leite com amendoim",
+        "name":" Trufa: Doce de leite com amendoim",
         "price": 8,
         "image": "image/6.jpg"
     },
     {
         "id": 7,
-        "name":" Delícia trufada: Doce de leite com paçoca",
+        "name":" Trufa: Doce de leite com paçoca",
         "price": 8,
         "image": "image/7.jpg"
     },
     {
         "id": 8,
-        "name":" Delícia trufada: Leite ninho",
+        "name":" Trufa: Leite ninho",
         "price": 8,
         "image": "image/8.jpg"
     },
     {
         "id": 9,
-        "name":" Delícia trufada: Paçoca",
+        "name":" Trufa: Paçoca",
         "price": 8,
         "image": "image/9.jpg"
     },
     {
         "id": 10,
-        "name":" Delícia trufada: Limão",
+        "name":" Trufa: Limão",
         "price": 8,
         "image": "image/10.jpg"
     },
     {
         "id": 11,
-        "name":" Delícia trufada: Maracujá",
+        "name":" Trufa: Maracujá",
         "price": 8,
         "image": "image/11.jpg"
     },
     {
         "id": 12,
-        "name":" Delícia trufada: Nutella Puro",
+        "name":" Trufa: Nutella Puro",
         "price": 9,
         "image": "image/12.jpg"
     }

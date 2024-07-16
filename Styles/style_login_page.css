@@ -6,19 +6,37 @@
 }
 body {
     font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #EB5B00, #FFB200, #E4003A);
+    background-size: 400% 400%; /* Alterado para permitir a transição de cores */
+    animation: color 100s ease-in-out infinite;
 }
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 120vh;
-    background: #201b2c;
 }
+
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
 .content {
-    background: #2f2841;
+    /* background: #2f2841; */
+    background: #FFC26F;
     border-radius: 15px;
     width: 960px;
-    height: 60%;
+    height: 70%;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -26,7 +44,7 @@ body {
 .content::before {
     content: "";
     position: absolute;
-    background-color: #2D9596;
+    background-color: #F79540;
     width: 40%;
     height: 100%;
     border-top-left-radius: 15px;
@@ -48,15 +66,16 @@ body {
 }
 
 .textfield > input {
-    width: 100%;
+    width: 95%;
     border: none;
     border-radius: 10px;
     /* O padding com um valor só aplica os valores tanto para eixo y quanto para o X */
     padding: 15px;
-    background: #514869;
-    color: #fff0f0de;
+    margin-left: 10px;
+    background: #F9E0BB;
+    color: #020201de;
     font-size: 12pt;
-    box-shadow: 0px 10px 40px #00000056;
+    box-shadow: 0px 10px 10px #00000056;
     outline: none;
     box-sizing: border-box;
 }
@@ -66,10 +85,10 @@ body {
     text-transform: capitalize;
 }
 .title-primary {
-    color: #fff;
+    color: #ffffff;
 }
 .title-second {
-    color: #00ffbf;
+    color: #ffffff;
 }
 .description {
     font-size: 14px;
@@ -77,10 +96,10 @@ body {
     line-height: 30px;
 }
 .description-primary {
-    color: #ECF4D6;
+    color: #f2f5ea;
 }
 .description-second {
-    color: aliceblue;
+    color: #820000;
 }
 .btn {
     border-radius: 15px;
@@ -96,19 +115,19 @@ body {
     margin-top: 1rem;
 }
 .btn-primary {
-    background-color: #071952;
-    border: 1px solid #071952;
+    background-color: #dd631c;
+    border: 1px solid #dd631c;
     transition: background-color .5s;
 }
 .btn-primary:hover {
     background-color: #fff;
     border: 1px solid #fff;
-    color: #04be90;
+    color: #d65600;
 }
 .btn-second {
     display: flex;
-    background-color: #071952;
-    border: 1px solid #071952;
+    background-color: #dd631c;
+    border: 1px solid #dd631c;
     transition: background-color .5s;
     /* margin-left: 35%; */
     justify-content: center;
@@ -116,8 +135,8 @@ body {
 }
 .btn-second:hover {
     background-color: #fff;
-    border: 1px solid #58af9b;
-    color: #58af9b;
+    border: 1px solid #fff;
+    color: #d65600;
 }
 .first-content {
     display: flex;
@@ -146,23 +165,23 @@ body {
     transition: background-color .5s;
 }
 .link-social-media:hover .item-social-media{
-    background-color: #04be90;
+    background-color: #D44000;
     color: #fff;
-    border-color: #04be90;
+    border-color: #D44000;
 }
 .list-social-media {
     display: flex;
     list-style-type: none;
 }
 .item-social-media {
-    border: 1px solid #bdc3c7;
+    border: 1px solid #fff;
     border-radius: 50%;
     width: 35px;
     height: 35px;
     line-height: 35px;
     text-align: center;
-    color: #95a5a6;
-    border-color: #04be90;
+    color: #fff;
+    border-color: #d14306;
 }
 .form {
     display: flex;
@@ -174,7 +193,7 @@ body {
     height: 45px;
     width: 100%;
     border: none;
-    background-color: #514869;
+    background-color: #F9E0BB;
 }
 input:-webkit-autofill
 {
@@ -184,7 +203,7 @@ input:-webkit-autofill
 
 .label-input {
     box-shadow: 0px 10px 40px #00000056;
-    background-color: #514869;
+    background-color: #F9E0BB;
     display: flex;
     align-items: center;
     margin: 8px;
@@ -210,7 +229,7 @@ input:-webkit-autofill
     z-index: -1;
 }
 .password {
-    color: #04ebdf;
+    color: #833400;
     font-size: 14px;
     margin: 15px 0;
     text-align: center;
