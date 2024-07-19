@@ -4,12 +4,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --cor-primaria: #5A639C;
+    --cor-secundaria: #7776B3;
+    --cor-terciaria:#9B86BD;
+    --cor-titulos:#ffffff;
+    --cor-botoes:#296073;
+    --cor-hover:aliceblue;
+    --cor-botao-login:#200046;
+}
 body {
     font-family: 'Open Sans', sans-serif;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(45deg, #EB5B00, #FFB200, #E4003A);
-    background-size: 400% 400%; /* Alterado para permitir a transição de cores */
+    background: linear-gradient(45deg, #200046, #7776B3, #296073);
+    background-size: 400% 400%;
     animation: color 100s ease-in-out infinite;
 }
 .container {
@@ -18,7 +27,6 @@ body {
     align-items: center;
     height: 120vh;
 }
-
 @keyframes color{
     0%{
         background-position: 0 50%;
@@ -30,10 +38,8 @@ body {
         background-position: 0 50%;
     }
 }
-
 .content {
-    /* background: #2f2841; */
-    background: #FFC26F;
+    background:var(--cor-primaria);
     border-radius: 15px;
     width: 960px;
     height: 70%;
@@ -44,35 +50,30 @@ body {
 .content::before {
     content: "";
     position: absolute;
-    background-color: #F79540;
+    background-color:var(--cor-secundaria);
     width: 40%;
     height: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
-
 .form-container {
     display: flex;
     flex-wrap: wrap;
 }
-
 .textfield {
-    flex: 1 1 45%; /* duas caixas por linha, com uma margem entre elas */
+    flex: 1 1 45%;
     margin: 5px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;   
 }
-
 .textfield > input {
     width: 95%;
     border: none;
     border-radius: 10px;
-    /* O padding com um valor só aplica os valores tanto para eixo y quanto para o X */
     padding: 15px;
     margin-left: 10px;
-    background: #F9E0BB;
     color: #020201de;
     font-size: 12pt;
     box-shadow: 0px 10px 10px #00000056;
@@ -85,10 +86,10 @@ body {
     text-transform: capitalize;
 }
 .title-primary {
-    color: #ffffff;
+    color: var(--cor-titulos);
 }
 .title-second {
-    color: #ffffff;
+    color:var(--cor-titulos);
 }
 .description {
     font-size: 14px;
@@ -96,15 +97,15 @@ body {
     line-height: 30px;
 }
 .description-primary {
-    color: #f2f5ea;
+    color:var(--cor-titulos);
 }
 .description-second {
-    color: #820000;
+    color:var(--cor-titulos);
 }
 .btn {
     border-radius: 15px;
     text-transform: uppercase;
-    color: aliceblue;
+    color: var(--cor-titulos);
     font-size: 10px;
     padding: 10px 50px;
     cursor: pointer;
@@ -115,28 +116,31 @@ body {
     margin-top: 1rem;
 }
 .btn-primary {
-    background-color: #dd631c;
-    border: 1px solid #dd631c;
+    background-color:var(--cor-botoes);
+    border: 1px solid var(--cor-botoes);
     transition: background-color .5s;
 }
 .btn-primary:hover {
-    background-color: #fff;
-    border: 1px solid #fff;
-    color: #d65600;
+    background-color: var(--cor-hover);
+    border: 1px solid var(--cor-hover);
+    color: var(--cor-botoes);
 }
 .btn-second {
     display: flex;
-    background-color: #dd631c;
-    border: 1px solid #dd631c;
+    background-color: var(--cor-botoes);
+    border: 1px solid var(--cor-botoes);
     transition: background-color .5s;
-    /* margin-left: 35%; */
     justify-content: center;
     align-items: center;
 }
 .btn-second:hover {
-    background-color: #fff;
-    border: 1px solid #fff;
-    color: #d65600;
+    background-color: var(--cor-hover);
+    border: 1px solid var(--cor-hover);
+    color: var(--cor-botoes);
+}
+.left-login-image {
+    margin-top: 12%;
+    width: 10vw;
 }
 .first-content {
     display: flex;
@@ -165,30 +169,29 @@ body {
     transition: background-color .5s;
 }
 .link-social-media:hover .item-social-media{
-    background-color: #D44000;
+    background-color: var(--cor-botoes);
     color: #fff;
-    border-color: #D44000;
+    border-color: var(--cor-botoes);
 }
 .list-social-media {
     display: flex;
     list-style-type: none;
 }
 .item-social-media {
-    border: 1px solid #fff;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    text-align: center;
+    width: 15rem;
+    height: 2rem;
+    border: 1px solid var(--cor-botao-login);
     color: #fff;
-    border-color: #d14306;
+    background-color: var(--cor-botao-login);
+    border-radius: 15px;
+    line-height: 1.9rem;
+    text-align: center;
 }
 .form {
     display: flex;
     flex-direction: column;
     width: 60%;
 }
-
 .form input {
     height: 45px;
     width: 100%;
@@ -200,7 +203,6 @@ input:-webkit-autofill
     -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
     -webkit-text-fill-color: #000 !important;
 }
-
 .label-input {
     box-shadow: 0px 10px 40px #00000056;
     background-color: #F9E0BB;
@@ -215,7 +217,6 @@ input:-webkit-autofill
 }
 
 /* second content*/
-
 .second-content {
     position: absolute;
     display: flex;
@@ -229,7 +230,7 @@ input:-webkit-autofill
     z-index: -1;
 }
 .password {
-    color: #833400;
+    color: var(--cor-titulos);
     font-size: 14px;
     margin: 15px 0;
     text-align: center;
@@ -241,14 +242,12 @@ input:-webkit-autofill
 .sign-in-js .first-content .first-column {
     z-index: -1;
 }
-
 .sign-in-js .second-content .second-column {
     z-index: 11;
 }
 .sign-in-js .second-content .first-column {
     z-index: 13;
 }
-
 .sign-in-js .content::before {
     left: 60%;
     border-top-left-radius: 0;
@@ -258,35 +257,29 @@ input:-webkit-autofill
     animation: slidein 1.3s;
     z-index: 12;
 }
-
 .sign-up-js .content::before {
     animation: slideout 1.3s;
     z-index: 12;
 }
-
 .sign-up-js .second-content .first-column,
 .sign-up-js .second-content .second-column {
     z-index: -1;
 }
-
 .sign-up-js .first-content .second-column {
     z-index: 11;
 }
-
 .sign-up-js .first-content .first-column {
     z-index: 13;
 }
-
-/* DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT:BEFORE*/
 .sign-in-js .first-content .second-column {
     z-index: -1;
     position: relative;
-    animation: deslocamentoEsq 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: deslocamentoEsq 1.3s;
 }
 .sign-up-js .second-content .second-column {
     position: relative;
     z-index: -1;
-    animation: deslocamentoDir 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: deslocamentoDir 1.3s;
 }
 
 /*ANIMAÇÃOO CSS PARA O CONTEÚDO*/
@@ -380,9 +373,13 @@ input:-webkit-autofill
     }
     .content::before {
         width: 100%;
-        height: 40%;
+        height: 35%;
         top: 0;
         border-radius: 0;
+    }
+    .left-login-image {
+        margin-top: 5%;
+        width: 30vw;
     }
     .first-content, .second-content {
         flex-direction: column;

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Epilogue:ital,wght@0,500;1,500&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,800;1,800&family=Roboto:wght@700&family=Teko:wght@600&display=swap');
+
+:root {
+    --fonte-primaria: "Dancing Script", sans-serif;
+    --fonte-secundaria: "Teko", sans-serif;
+    --fonte-terciaria: "Epilogue", sans-serif;
+    --fonte-quarternaria: "Montserrat", sans-serif;
+    --fonte-quintenaria: "Inter", sans-serif;
+}
+body {
+    margin: 0;
+    font-family: var(--fonte-terciaria);
+     background-color: #e9dace;
+}
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #d6ccc2;
+    height: 20vh;
+}
+.menu{
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 150px;
+    padding: 1%;
+}
+.login_icon {
+    width: 2vw;
+    z-index: 10;
+}
+.presentation_img{
+    max-height: 65vh;
+    width: 100vw;
+}
+h1{
+    color:#ed6335;
+    margin-left: 1rem;
+}
+article{
+    color: #24170f;
+    margin: 1rem 6rem 1rem 6rem;
+    padding: 10px;
+    text-align:justify;
+    font-family: var(--fonte-quarternaria);
+    font-size: 15px;
+}
+a{
+    text-decoration: none;
+    color: #222222;
+}
+footer {
+    width: 100vw;
+    background: #5d5d69;
+    margin-top: 5rem; 
+    padding: .7rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+.estilo_footer {
+    margin-left: 15.8rem;
+}
+.footer__copy {
+    font-family: var(--fonte-quintenaria);
+    font-size: .8rem;
+    font-weight: 500;
+    color: #FFF2E7;
+}
+.github {
+    padding: 15px;
+    width: 20%;
+    border-radius: 100%;
+}      
+.instagram_image {
+    width: 12%;
+    margin-left: 9rem;
+}
+/* outros dispositivos, ligeiramente maiores que um celular comum */
+@media only screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        max-width: 100vw;
+        text-align: center;
+        background-color: #d6ccc2;
+    }
+    .menu{
+        max-width: 100vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20%;
+        padding: 1%;
+        margin: 1% 5%;
+    }
+    .about{
+        font-size: large;
+    }
+    .login_icon {
+        width: 5vw;
+        z-index: 10;
+    }
+    .presentation_img{
+        max-height: 65vh;
+        max-width: 100vw;
+    }
+    article{
+        color: #24170f;
+        margin: 1rem 8rem 1rem 8rem;
+        padding: 10px;
+        text-align:justify;
+        font-family: var(--fonte-quarternaria);
+        font-size: 15px;
+    }
+    footer {
+        background: #9d9dac;
+        margin-top: 5rem;
+        padding: 1rem;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .estilo_footer {
+        margin-left: 9rem;
+    }
+    .footer__copy {
+        font-family: var(--fonte-quintenaria);
+        font-size: 1rem;
+        font-weight: 500;
+        color: #FFF2E7;
+    }
+    .github {
+        padding: 15px;
+        width: 35%;
+        border-radius: 100%;
+    }      
+    .instagram_image {
+        width: 30%;
+        padding: 15px;
+        margin-left: 10%;
+    } 
+}
+
+/* mobile */
+@media only screen and (max-width: 480px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        max-width: 100vw;
+        text-align: center;
+        background-color: #d6ccc2;
+    }
+    .menu{
+        max-width: 100vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 9%;
+        padding: 1%;
+        margin: 1% 5% 1% 2%;
+    }
+    .login_icon {
+        width: 5.5vw;
+        z-index: 10;
+    }
+    .presentation_img{
+        max-height: 65vh;
+        max-width: 100vw;
+    }
+    article{
+        color: #24170f;
+        margin: 1rem 1rem 1rem 1rem;
+        padding: 10px;
+        text-align:justify;
+        font-family: var(--fonte-quarternaria);
+        font-size: 15px;
+    }
+    footer {
+        background: #82828d;
+        margin-top: 5rem;
+        padding: 1rem;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .estilo_footer {
+        margin-left: 3.5rem;
+    }
+    .footer__copy {
+        font-family: var(--fonte-quintenaria);
+        font-size: 1rem;
+        font-weight: 500;
+        color: #FFF2E7;
+    }
+    .github {
+        padding: 15px;
+        width: 40%;
+        border-radius: 100%;
+    }      
+    .instagram_image {
+        width: 40%;
+        padding: 15px;
+        margin-left: 10%;
+    } 
+}
