@@ -6,12 +6,25 @@
     --fonte-terciaria: "Epilogue", sans-serif;
     --fonte-quarternaria: "Montserrat", sans-serif;
     --fonte-quintenaria: "Inter", sans-serif;
+    --background-body: #e9dace;
+    --background-container: #d6ccc2;
+    --background-lista-produtos: #C5C4DA;
+    --backgorund-botoes: #023d64fa;
+    --texto-botoes:#ffffff;
+    --background-botoes-hover:#17415e;
+    --texto-botoes-hover:#c9c3c3;
+    --background-cartTab: #353432;
+    --cartTab-buton-comprar:#E8BC0E;
+    --cartTab-buton-hover:#e0c144;
+    --cartTab-buton-quatity-background: #eee;
+    --cartTab-button-quantity-text: #7504f7f3;
+    --background-footer: #5d5d69;
 }
 body {
     margin: 0;
     font-family: var(--fonte-terciaria);
     z-index: 1;
-    background-color: #e9dace;
+    background-color:var(--background-body);
 }
 .container {
     display: flex;
@@ -19,7 +32,7 @@ body {
     max-width: 100vw;
     text-align: center;
     transition: transform .5s;
-    background-color: #d6ccc2;
+    background-color: var(--background-container);
 }
 svg {
     width: 1.563vw;
@@ -54,7 +67,7 @@ a{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    color: #ffffff;
+    color: var(--texto-botoes);
     top: 60%;
     right: -99%;
 }
@@ -77,7 +90,7 @@ a{
     justify-content: baseline;
 }
 .listProduct .item {
-    background-color: #C5C4DA;
+    background-color: var(--background-lista-produtos);
     padding: 20px;
     border-radius: 20px;
     display: flex;
@@ -109,8 +122,8 @@ a{
     text-align: center;
 }
 .listProduct .item button {
-    background-color: #023d64fa;
-    color: #ffffff;
+    background-color: var(--backgorund-botoes);
+    color: var(--texto-botoes);
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
@@ -119,13 +132,13 @@ a{
     margin-top: auto;
 }
 .listProduct .item button:hover {
-    background-color: #17415e;
-    color: #c9c3c3;
+    background-color: var(--background-botoes-hover);
+    color: var(--texto-botoes-hover);
 }
 .cartTab {
     width: 500px;
-    background-color: #353432;
-    color: #eee;
+    background-color: var(--background-cartTab);
+    color: var(--background-lista-produtos);
     position: fixed;
     top: 0;
     right: -500px;
@@ -162,14 +175,14 @@ body.showCart .container {
     height: 60px;
 }
 .cartTab button {
-    background-color: #E8BC0E;
+    background-color: var(--cartTab-buton-comprar);
     border: none;
     font-family: Poppins;
     font-weight: 500;
     cursor: pointer;
 }
 .cartTab button:hover {
-    background-color: #e0c144;
+    background-color: var(--cartTab-buton-hover);
 }
 .cartTab .close {
     background-color: #eee;
@@ -198,16 +211,16 @@ body.showCart .container {
     display: inline-block;
     width: 25px;
     height: 25px;
-    background-color: #eee;
+    background-color: var(--cartTab-buton-quatity-background);
     border-radius: 50%;
-    color: #7504f7f3;
+    color: var(--cartTab-button-quantity-text);
     cursor: pointer;
     font-family: var(--fonte-secundaria);
     font-size: 1.25rem;
 }
 .listCart .quantity span:nth-child(2) {
     background-color: transparent;
-    color: #eee;
+    color: var(--cartTab-buton-quatity-background);
     cursor: auto;
 }
 .listCart .item:nth-child(even) {
@@ -228,7 +241,7 @@ body.showCart .container {
     z-index: 5;
 }
  footer {
-    background: #5d5d69;
+    background: var(--background-footer);
     margin-top: 5rem; 
     padding: .7rem;
     display: flex;
@@ -242,7 +255,7 @@ body.showCart .container {
     font-family: var(--fonte-quintenaria);
     font-size: .8rem;
     font-weight: 500;
-    color: #FFF2E7;
+    color: #ffffff;
 }
 .github {
     padding: 15px;
@@ -254,9 +267,6 @@ body.showCart .container {
     margin-left: 9rem;
 } 
 
-
-
-
 /* mobile */
 @media only screen and (max-width: 768px) {  
     .container {
@@ -264,7 +274,6 @@ body.showCart .container {
         justify-content: center;
         max-width: 100vw;
         text-align: center;
-        background-color: #d6ccc2;
     }
     svg {
         width: 5vw;
@@ -291,7 +300,6 @@ body.showCart .container {
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-        color: #ffffff;
         top: 50%;
         right: -20%;
         left: 100%;
@@ -304,7 +312,6 @@ body.showCart .container {
         justify-content: baseline;
     }
     .listProduct .item {
-        background-color: #C5C4DA;
         padding: 10px;
         border-radius: 20px;
         display: flex;
@@ -330,8 +337,6 @@ body.showCart .container {
         text-align: center;
     }
     .listProduct .item button {
-        background-color: #023d64fa;
-        color: #ffffff;
         border: none;
         padding: 5px 10px;
         border-radius: 20px;
@@ -341,8 +346,6 @@ body.showCart .container {
     }
     .cartTab {
         width: 80vw;
-        background-color: #353432;
-        color: #eee;
         position: fixed;
         top: 0;
         right: -850px;
@@ -364,9 +367,7 @@ body.showCart .container {
         display: inline-block;
         width: 2rem;
         height: 2rem;
-        background-color: #eee;
         border-radius: 50%;
-        color: #7504f7f3;
         cursor: pointer;
         font-family: var(--fonte-secundaria);
         font-size: 1.5rem;
@@ -380,7 +381,6 @@ body.showCart .container {
         z-index: 5;
     }
     footer {
-        background: #5d5d69;
         margin-top: 5rem;
         padding: 1rem;
         display: flex;
@@ -394,7 +394,6 @@ body.showCart .container {
         font-family: var(--fonte-quintenaria);
         font-size: 1rem;
         font-weight: 500;
-        color: #FFF2E7;
     }
     .github {
         padding: 15px;
@@ -424,7 +423,6 @@ body.showCart .container {
         display: flex;
         justify-content: center;
         font-family: var(--fonte-quintenaria);
-        color:#595f61
     }
     .icon-cart span {
         width: 6.5vw;
@@ -454,8 +452,6 @@ body.showCart .container {
     }
     .cartTab {
         width: 100vw;
-        background-color: #353432;
-        color: #eee;
         position: fixed;
         top: 0;
         right: -850px;
@@ -477,9 +473,7 @@ body.showCart .container {
         display: inline-block;
         width: 1.21rem;
         height: 1.21rem;
-        background-color: #eee;
         border-radius: 50%;
-        color: #0445f7f3;
         cursor: pointer;
         font-family: var(--fonte-secundaria);
         font-size: 1.1rem;
