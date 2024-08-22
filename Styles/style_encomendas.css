@@ -11,6 +11,7 @@
     --background-lista-produtos: #C5C4DA;
     --backgorund-botoes: #023d64fa;
     --texto-botoes:#ffffff;
+    --white: #ffffff;
     --background-botoes-hover:#17415e;
     --texto-botoes-hover:#c9c3c3;
     --background-cartTab: #353432;
@@ -240,32 +241,70 @@ body.showCart .container {
     right: 2.5vw;
     z-index: 5;
 }
- footer {
+footer {
     background: var(--background-footer);
     margin-top: 5rem; 
-    padding: .7rem;
+    padding: 3rem 2rem 3rem 6.5rem;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-between;
     align-items: center;
+    color: var(--white);
 }
 .estilo_footer {
-    margin-left: 15rem;
+    display: grid;
+    grid-template-columns: 15rem 15rem 16rem 17rem;
+    gap: 1rem;
+}
+.empresa {
+    font-weight: 300;
+    font-family: var(--fonte-quintenaria);
+}
+.nome__empresa {
+    font-weight: 700;
+}
+.informacoes {
+    padding: 0;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.informacoes__title{
+    font-weight: 700;
+    font-family: var(--fonte-quintenaria);
+}
+.infos, 
+.infos a {
+    margin:0;
+    list-style: none;
+    color: var(--white);
+    padding-left: 0;
+    font-weight: 500;
+    font-family: var(--fonte-quintenaria);
+}
+.contato{
+    font-weight: 300;
+    font-family: var(--fonte-quintenaria);
 }
 .footer__copy {
     font-family: var(--fonte-quintenaria);
     font-size: .8rem;
     font-weight: 500;
-    color: #ffffff;
 }
-.github {
-    padding: 15px;
-    width: 20%;
-    border-radius: 100%;
-}      
-.instagram_image {
-    width: 12%;
-    margin-left: 9rem;
-} 
+.siga{
+    margin-left: 5rem;
+}
+.siga_title{
+    font-weight: 700;
+    font-family: var(--fonte-quintenaria);
+}
+.icons{
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px, solid, var(--background-body);
+    border-radius: 50%;
+    padding: .3rem;
+}
 
 /* mobile */
 @media only screen and (max-width: 768px) {  
@@ -382,29 +421,22 @@ body.showCart .container {
     }
     footer {
         margin-top: 5rem;
-        padding: 1rem;
+        padding: 2rem 1rem 0 .1rem;
         display: flex;
+        flex-direction: column;
         justify-content:center;
         align-items: center;
     }
     .estilo_footer {
-        margin-left: 3.5rem;
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
     }
     .footer__copy {
         font-family: var(--fonte-quintenaria);
         font-size: 1rem;
         font-weight: 500;
     }
-    .github {
-        padding: 15px;
-        width: 40%;
-        border-radius: 100%;
-    }      
-    .instagram_image {
-        width: 40%;
-        padding: 15px;
-        margin-left: 10%;
-    } 
 }
 
 /* mobile */
@@ -485,5 +517,8 @@ body.showCart .container {
         bottom: 20.5vw;
         right: 1vw;
         z-index: 5;
+    }
+    .siga{
+        margin-left: .1rem;
     }
 }
