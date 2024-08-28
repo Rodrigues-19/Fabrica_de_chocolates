@@ -1,0 +1,97 @@
+.cartTab {
+    width: 500px;
+    background-color: var(--background-cartTab);
+    color: var(--background-lista-produtos);
+    position: fixed;
+    top: 0;
+    right: -500px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+    z-index: 10;
+}
+body.showCart .cartTab {
+    right: 0;
+}
+body.showCart .container {
+    transform: translateX(0px);
+}
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    font-family: var(--fonte-terciaria);
+    color: rgb(253, 253, 253);
+}
+.cartTab .subtotal {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+    color: rgb(180, 224, 245);
+    font-family: var(--fonte-quintenaria);
+}
+.cartTab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-family: var(--fonte-quintenaria);
+    height: 60px;
+}
+.cartTab button {
+    background-color: var(--cartTab-buton-comprar);
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cartTab button:hover {
+    background-color: var(--cartTab-buton-hover);
+}
+.cartTab .close {
+    background-color: #eee;
+}
+.cartTab .close:hover {
+    background-color: #bdbaba;
+}
+.listCart .item img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 10px;
+    border-radius: 10%;
+}
+.listCart .item {
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    font-family: var(--fonte-terciaria);
+    font-size: 0.938rem;
+}
+.listCart .quantity span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: var(--cartTab-buton-quatity-background);
+    border-radius: 50%;
+    color: var(--cartTab-button-quantity-text);
+    cursor: pointer;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.25rem;
+}
+.listCart .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: var(--cartTab-buton-quatity-background);
+    cursor: auto;
+}
+.listCart .item:nth-child(even) {
+    background-color: #eee1;
+}
+.listCart {
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar {
+    width: 0;
+}

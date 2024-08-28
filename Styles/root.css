@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Epilogue:ital,wght@0,500;1,500&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,800;1,800&family=Roboto:wght@700&family=Teko:wght@600&display=swap');
+@import url(header_encomendas.css);
+@import url(body_encomendas.css);
+@import url(list_cart.css);
+@import url(footer.css);
+:root {
+    --fonte-primaria: "Dancing Script", sans-serif;
+    --fonte-secundaria: "Teko", sans-serif;
+    --fonte-terciaria: "Epilogue", sans-serif;
+    --fonte-quarternaria: "Montserrat", sans-serif;
+    --fonte-quintenaria: "Inter", sans-serif;
+    --background-body: #e9dace;
+    --background-container: #d6ccc2;
+    --background-lista-produtos: #C5C4DA;
+    --backgorund-botoes: #023d64fa;
+    --texto-botoes:#ffffff;
+    --white: #ffffff;
+    --background-botoes-hover:#17415e;
+    --texto-botoes-hover:#c9c3c3;
+    --background-cartTab: #353432;
+    --cartTab-buton-comprar:#E8BC0E;
+    --cartTab-buton-hover:#e0c144;
+    --cartTab-buton-quatity-background: #eee;
+    --cartTab-button-quantity-text: #7504f7f3;
+    --background-footer: #0A3441;
+}
+
+/* mobile */
+@media only screen and (max-width: 768px) {  
+    .container {
+        display: flex;
+        justify-content: center;
+        max-width: 100vw;
+        text-align: center;
+    }
+    svg {
+        width: 5vw;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5%;
+        margin-right: 3rem;
+    }
+    .login_icon {
+        width: 5.5vw;
+        z-index: 10;
+    }
+    .icon-cart {
+        position: relative;
+    }
+    .icon-cart span {
+        width: 4vw;
+        height: 3vh;
+        border: 1px solid #0018a0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        top: 50%;
+        right: -20%;
+        left: 100%;
+    }
+    .listProduct {
+        margin: 10% 10% 2% 10%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+        justify-content: baseline;
+    }
+    .listProduct .item {
+        padding: 10px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+        box-sizing: unset;
+    }
+    .listProduct .item img {
+        height: 55%;
+        filter: drop-shadow(0 10px 10px #0009);
+        margin-bottom: 10px;
+    }
+    .listProduct .item h2 {
+        padding: 15px; 
+        font-size:105%;
+    }
+    .listProduct .item .price {
+        font-size: small;
+        font-family: var(--fonte-quintenaria);
+        margin-top: 10px;
+        text-align: center;
+    }
+    .listProduct .item button {
+        border: none;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-family: var(--fonte-quintenaria);
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .cartTab {
+        width: 80vw;
+        position: fixed;
+        top: 0;
+        right: -850px;
+        bottom: 0;
+        display: grid;
+        grid-template-rows: 70px 1fr 70px;
+        transition: .5s;
+    }
+    .listCart .item {
+        display: grid;
+        grid-template-columns: 70px 150px 50px 1fr;
+        gap: 4rem;
+        text-align: center;
+        align-items: center;
+        font-family: var(--fonte-terciaria);
+        font-size: 1.3rem;
+    }
+    .listCart .quantity span {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        cursor: pointer;
+        font-family: var(--fonte-secundaria);
+        font-size: 1.5rem;
+    }
+    .whatsapp-link {
+        position: fixed;
+        width: 9vw;
+        height: 6.5vh;
+        bottom: 85px;
+        right: .5rem;
+        z-index: 5;
+    }
+    footer {
+        margin-top: 5rem;
+        padding: 2rem 1rem 0 .1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    .estilo_footer {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer__copy {
+        font-family: var(--fonte-quintenaria);
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+
+/* mobile */
+@media only screen and (max-width: 480px) {
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5%;
+        margin-right: 2rem;
+    }
+    .subtitle{
+        padding: 1%;
+        margin: 10%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-family: var(--fonte-quintenaria);
+    }
+    .icon-cart span {
+        width: 6.5vw;
+        height: 2.7vh;
+        right: -25%;
+    }
+    .listProduct {
+        grid-template-columns: 1fr;
+    }
+    .listProduct .item {
+        padding: 15px;
+    }
+    .listProduct .item img {
+        margin-top: 1rem;
+        width: 90%;
+    }
+    .listProduct .item h2 {
+        font-size: 2rem;
+    }
+    .listProduct .item .price {
+        font-size: 1.1rem;
+    }
+    .listProduct .item button {
+        padding: 5px;
+        font-size: 1.1rem;
+        width: 80%;
+    }
+    .cartTab {
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        right: -850px;
+        bottom: 0;
+        display: grid;
+        grid-template-rows: 70px 1fr 70px;
+        transition: .5s;
+    }
+    .listCart .item {
+        display: grid;
+        grid-template-columns: 70px 150px 50px 1fr;
+        gap: .3rem;
+        text-align: center;
+        align-items: center;
+        font-family: var(--fonte-terciaria);
+        font-size: .99rem;
+    }
+    .listCart .quantity span {
+        display: inline-block;
+        width: 1.21rem;
+        height: 1.21rem;
+        border-radius: 50%;
+        cursor: pointer;
+        font-family: var(--fonte-secundaria);
+        font-size: 1.1rem;
+    }
+    .whatsapp-link {
+        position: fixed;
+        width: 15vw;
+        height: 7vh;
+        bottom: 20.5vw;
+        right: 1vw;
+        z-index: 5;
+    }
+    .siga{
+        margin-left: .1rem;
+    }
+}

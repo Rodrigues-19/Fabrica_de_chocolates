@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: var(--fonte-terciaria);
+    z-index: 1;
+    background-color:var(--background-body);
+}
+.presentation_img{
+    max-height: 300px;
+    width: 98.75vw;
+}
+.subtitle{
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    font-family: var(--fonte-quintenaria);
+    color:#6d7375
+}
+.listProduct {
+    margin: 2% 10% 2% 10%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    justify-content: baseline;
+}
+.listProduct .item {
+    background-color: var(--background-lista-produtos);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    box-sizing: border-box;
+}
+.listProduct .item img {
+    width: 60%;
+    max-width: 60%;
+    height: auto; 
+    filter: drop-shadow(0 15px 20px #0009);
+    margin-bottom: 10px;
+}
+.listProduct .item h2 {
+    font-weight: 500;
+    font-size: 150%;
+    font-family: var(--fonte-primaria);
+    margin: 10px 0;
+    text-align: center;
+}
+.listProduct .item .price {
+    letter-spacing: 7px;
+    font-size: small;
+    font-family: var(--fonte-quintenaria);
+    margin: 10px 0;
+    text-align: center;
+}
+.listProduct .item button {
+    background-color: var(--backgorund-botoes);
+    color: var(--texto-botoes);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: var(--fonte-quintenaria);
+    cursor: pointer;
+    margin-top: auto;
+}
+.listProduct .item button:hover {
+    background-color: var(--background-botoes-hover);
+    color: var(--texto-botoes-hover);
+}
+.whatsapp-link {
+    position: fixed;
+    width: 4vw;
+    height: 9vh;
+    bottom: 7.5vw;
+    right: 2.5vw;
+    z-index: 5;
+}
